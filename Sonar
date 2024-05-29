@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-               git 'https://github.com/Ravali08/public-api-java.git'
+               git 'https://github.com/Ravali08/public-api-java.git/docker-multistagebuild-java'
             }
         }
         stage('Build Docker Image') {
