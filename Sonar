@@ -17,7 +17,7 @@ pipeline {
         stage('SonarQube Analysis Stage') {
             steps{
                 withSonarQubeEnv('sonar') { 
-                    sh 'cd /docker-multistagebuild-java'
+                    sh 'cd docker-multistagebuild-java'
                     sh "mvn clean verify sonar:sonar -Dsonar.projectKey=demo-sonar -e -X"
                 }
             }
